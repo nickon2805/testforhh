@@ -121,22 +121,4 @@ const modals = () => {
 modals();
 // end popup
 
-// mail-php-js
 
-document.querySelector(document).ready(function () {
-  document.querySelector("form").submit(function () {
-    var th = document.querySelector(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php",
-      data: th.serialize()
-    }).done(function () {
-      alert("Thank you!");
-      setTimeout(function () {
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
-});
