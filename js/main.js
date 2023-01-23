@@ -123,19 +123,16 @@ modals();
 
 // mail-php-js
 
-$(document).ready(function () {
-
-  //E-mail Ajax Send
-  $("form").submit(function () { //Change
-    var th = $(this);
+document.querySelector(document).ready(function () {
+  document.querySelector("form").submit(function () {
+    var th = document.querySelector(this);
     $.ajax({
       type: "POST",
-      url: "mail.php", //Change
+      url: "mail.php",
       data: th.serialize()
     }).done(function () {
       alert("Thank you!");
       setTimeout(function () {
-        // Done Functions
         th.trigger("reset");
       }, 1000);
     });
